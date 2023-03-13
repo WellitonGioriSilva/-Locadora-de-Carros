@@ -8,7 +8,7 @@ Lara Beatriz de Abreu Alves
 -Telas Obrigatórias:
 Home
 Frota
-Seminovos
+Quem somos
 Ofertas
 Contato
 Localização
