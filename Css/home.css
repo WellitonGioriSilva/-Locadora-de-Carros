@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    /*box-sizing: border-box;*/
+}
+
+.topnav a{
+    text-decoration: none;
+    float: right;
+    padding: 25px 45px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #ffbe00;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.topnav a:hover{
+    text-shadow: 0px 1px 13px rgba(255, 190, 0, 1);
+}
+
+.topnav .user-icon{
+    padding: 20px 45px;
+    font-size: 30px;
+}
+
+.topnav img{
+    width: 100px;
+    padding: 15px 35px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background-color: #ffbe00;
+    width: 100%;
+    height: 190px;
+}
+
+footer .textAval{
+    width: 370px;
+    display: inline-block;
+}
+
+footer .textAval p{
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+
+footer .textAval h1{
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer .iconPessoa{
+    width: 120px;
+    display: inline-block; 
+}
+
+footer .iconPessoa img{
+    width: 100px;
+}
+
+footer .card{
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+footer .title{
+    position: absolute;
+    top: 10px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+}
+
