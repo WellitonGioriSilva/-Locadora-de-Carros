@@ -1,0 +1,88 @@
+<!-- Feito por Felipe dos Santos Torejiani-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/styleCadastrarFunc.css">
+    <title>Cadastrar Funcionario</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="Img/Logo.png" alt="">
+        </div>
+        <div class="form">
+            <form action="Php/cadastrarFuncionario.php" method="post">
+
+                <div class="input-group">
+                    <div class="form-header">
+                        <div class="title">
+                            <h1>Funcionario</h1>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="namefunc">Nome Completo</label>
+                        <input id="namefunc" name="namefunc" type="text" placeholder="Digite seu nome completo" required
+                            minlength="5" maxlength="60">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="numerocpf">CPF</label>
+                        <input id="numerocpf" name="numerocpf" type="text" placeholder="Digite seu CPf" required
+                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="emailfunc">Email</label>
+                        <input id="emailfunc" name="emailfunc" type="text" placeholder="Digite seu email" required
+                            minlength="1" maxlength="60">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="telefone">Contado</label>
+                        <input id="contadofunc" name="contadofunc" type="text" placeholder="(xx) xxxx-xxxx">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="arselect">Gênero:</label>
+                        <select name="arselect" id="arselect" required>
+                            <option value="" hidden>escolha</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outros</option>
+
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="datanascimento">Data de Nascimento</label>
+                        <input id="datanascimento" name="datanascimento" type="date" required>
+                    </div>
+
+                    <script src="Js/Mascara.js"></script>
+
+                    <script>
+                        new FormMask(document.querySelector("#numerocpf"), "___.___.___-__", "_", [".", "-"])
+                        new FormMask(document.querySelector("#condadofunc"), "(__)_____-____", "_", ["(", ")", "-"])
+                    </script>
+
+                </div>
+
+                <div class="continue-button">
+                    <button onclick="validarCPF()" type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="Js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- PROJETO |LARA BEATRIZ DE ABREU ALVES -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/styleCadastrarPromocao.css">
+    <title>Formulário</title>
+
+</head>
+
+<body>
+
+    
+    <div class="container">
+        <div class="form-image">
+            <label class="picture" for="picture_input" tabindex="0">
+              <span class="logo.png"></span>
+              <input type="file" accept="img/*" id="picture_input">
+            </label>
+        </div>
+        <div class="form">
+            <form action="Php/cadastrarPromocao.php" method="post">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Promoção</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="#">Entrar</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="veiculo">Nome do veículo</label>
+                        <input id="veiculo" type="text" name="veiculo" placeholder="Digite o nome do veículo"  minlength="5" maxlength="20">
+                        
+                    </div>                   
+
+                    <div class="input-box">
+                        <label for="valorAtual">Valor atual</label>
+                        <input id="valorAtual" type="text" name="valorAtual" placeholder="Insira o valor" required>
+
+                    </div>
+
+                    <div class="input-box">
+                        <label for="valorPromocional">Valor promocional</label>
+                        <input id="valorPromocional" type="valorPromocional" name="valorPromocional" placeholder="Insira o valor" required>
+                    </div>   
+                    
+                    <div class="input-box">
+                        <label for="inicio">Início da Promoção</label>
+                        <input id="inicio" type="datetime-local" name="inicio"  required>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="final">Término da promoção</label>
+                        <input id="final" type="datetime-local" name="final"  required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="tipoVeiculo">Tipo do veículo</label required>
+                        <select name="tipoVeiculo" id="tipoVeiculo" required>
+                        <option value="Mini">Mini</option> 
+                        <option value="Econômico">Econômico</option>
+                        <option value="Compacto">Compacto</option>
+                        <option value="Compacto estate">Compacto estate</option>
+                        <option value="Intermediário">Intermediário</option>
+                        <option value="Intermediário estate">Intermediário estate</option>
+                        <option value="Padrão">Padrão</option>
+                        <option value="Padrão estate">Padrão estate</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Suv">Suv</option>
+                        <option value="Monovolume">Monovolume</option>
+                        <option value="Luxo">Luxo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="tipo">Tipo da Promoção</label required>
+                    <select name="tipo" id="tipo" required>
+                    <option value="Oferta pro tempo limitado">Oferta pro tempo limitado</option> 
+                    <option value="50% no primeiro aluguel">50% no primeiro aluguel</option>
+                    <option value="Relâmpago">Relâmpago</option>
+                    </select>
+                </div>
+
+               
+               <div class="continue-button">
+                    <button onclick="validarValor()" type="submit">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="Js/valor2.js"></script>
+   
+</body>
+
+</html>

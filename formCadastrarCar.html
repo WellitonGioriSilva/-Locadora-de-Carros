@@ -1,0 +1,155 @@
+<!-- Feito por Welliton Giori Silva -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/styleCadastrarCar.css">
+    <title>Cadastrar Carro</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="Img/Logo.png" alt="">
+        </div>
+        <div class="form">
+            <form action="Php/cadastrarCar.php" method="post">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Veículo</h1>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="nome">Veículo</label>
+                        <input id="nome" name="nome" type="text" placeholder="Digite o nome do veículo"
+                            required minlength="5" maxlength="50">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="portasselect">Portas</label>
+                        <select name="portasselect" id="portasselect" required>
+                            <option value="" hidden>Quant. Portas</option>
+                            <option value="quatro">4 Portas</option>
+                            <option value="tres">3 Portas</option>
+                            <option value="duas">2 Portas</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="arselect">Ar-Condicionado</label>
+                        <select name="arselect" id="arselect" required>
+                            <option value="" hidden>Ar-Condicionado</option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="travaselect">Trava</label>
+                        <select name="travaselect" id="travaselect" required>
+                            <option value="" hidden>Tipo de Trava</option>
+                            <option value="eletrica">Elétrica</option>
+                            <option value="manual">Manual</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="airbagselect">Air Bag</label>
+                        <select name="airbagselect" id="airbagselect" required>
+                            <option value="" hidden>Air Bag</option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="direcaoselect">Direção</label>
+                        <select name="direcaoselect" id="direcaoselect" required>
+                            <option value="" hidden>Tipo de Direção</option>
+                            <option value="eletrica">Elétrica</option>
+                            <option value="hidraulica">Hidráulica</option>
+                            <option value="mecanica">Mecânica</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="freioselect">Freio</label>
+                        <select name="freioselect" id="freioselect" required>
+                            <option value="" hidden>Tipo de Freio</option>
+                            <option value="abs">Abs</option>
+                            <option value="cbs">Cbs</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cambioselect">Câmbio</label>
+                        <select name="cambioselect" id="cambioselect" required>
+                            <option value="" hidden>Tipo de Câmbio</option>
+                            <option value="automatico">Automático</option>
+                            <option value="manual">Manual</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="malaselect">Porta-Malas</label>
+                        <select name="malaselect" id="malaselect" required>
+                            <option value="" hidden>Porta-malas</option>
+                            <option value="1malapequena">(1) Malas pequena</option>
+                            <option value="2malapequena">(2) Malas pequena</option>
+                            <option value="3malapequena">(3) Malas pequena</option>
+                            <option value="4malapequena">(4) Malas pequena</option>
+                            <option value="1malagrande">(1) Malas grande</option>
+                            <option value="2malagrande">(2) Malas grande</option>
+                            <option value="3malagrande">(3) Malas grande</option>
+                            <option value="4malagrande">(4) Malas grande</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="pessoasselect">Pessoas</label>
+                        <select name="pessoasselect" id="pessoasselect" required>
+                            <option value="" hidden>Capacidade de pessoas</option>
+                            <option value="2">2 Pessoa</option>
+                            <option value="5">5 Pessoa</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="tracaoselect">Tração</label>
+                        <select name="tracaoselect" id="tracaoselect" required>
+                            <option value="" hidden>Tração</option>
+                            <option value="4x4">4X4</option>
+                            <option value="2x4">2X4</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="valoraluguel">Valor</label>
+                        <input id="valoraluguel" name="valoraluguel" type="text" placeholder="Digite o valor do aluguel" onkeypress="voltarColor()" required pattern="[0-9]+$">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="placa">Placa</label>
+                        <input id="placa" name="placa" type="text" placeholder="Digite a placa do veículo" required  minlength="7" maxlength="7">
+                    </div>
+
+                </div>
+
+                <div class="continue-button">
+                    <button onclick="validarValor()" type="submit">Cadastrar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="Js/Valor.js"></script>
+</body>
+
+</html>
