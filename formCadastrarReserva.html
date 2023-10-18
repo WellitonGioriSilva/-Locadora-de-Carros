@@ -1,4 +1,17 @@
 <!-- Feito por Felipe dos Santos Torejiani-->
+<?php
+session_start();
+require_once('Php/login.php');
+
+// Verificar se o usuário está logado
+if (!isset($_SESSION['usuario'])) {
+    header("Location: formLogarUsuario.html"); // Redireciona para a página de login se não estiver logado
+    exit();
+}
+
+// Obter informações do usuário$usuario = $_SESSION['usuario'];
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

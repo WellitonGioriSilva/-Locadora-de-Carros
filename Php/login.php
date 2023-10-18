@@ -20,6 +20,8 @@
         $result = $conn->query($sql);
 
         if ($result->num_rows == 1) {
+            $row = $result->fetch_assoc();
+            $_SESSION['usuario'] = array('name' => $row['nome_cli'], 'cpf' => $row['cpf_cli']);
             header("Location: ../index.html");
             exit();
         } else {
