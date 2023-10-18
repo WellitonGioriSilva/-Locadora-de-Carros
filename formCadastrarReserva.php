@@ -1,17 +1,17 @@
-<!-- Feito por Felipe dos Santos Torejiani-->
-<?php
+ <!-- Feito por Felipe dos Santos Torejiani-->
+ <?php
 session_start();
-require_once('Php/login.php');
+//require_once('Php/dados_usuario.php');
 
 // Verificar se o usuário está logado
-if (!isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['usuario']) && !is_array($_SESSION['usuario'])) {
     header("Location: formLogarUsuario.html"); // Redireciona para a página de login se não estiver logado
     exit();
 }
 
-// Obter informações do usuário$usuario = $_SESSION['usuario'];
+// Obter informações do usuário
+$usuario = $_SESSION['usuario'];
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -31,7 +31,6 @@ if (!isset($_SESSION['usuario'])) {
         </div>
         <div class="form">
             <form action="Php/cadastrarReserva.php" method="post">
-
                 <div class="input-group">
                     <br>
                     <div class="form-header">
@@ -42,19 +41,17 @@ if (!isset($_SESSION['usuario'])) {
 
                     <div class="input-box">
                         <label for="condutorname">Condutor</label>
-                        <input id="condutorname" name="condutorname" type="text" placeholder="Digite o nome do condutor"
-                            required minlength="5" maxlength="60">
+                        <input id="condutorname" name="condutorname" type="text" value="<?php echo $usuario['name']; ?>" readonly/>
                     </div>
 
                     <div class="input-box">
                         <label for="contato">Contato</label>
-                        <input id="contato" name="contato" type="text" required
-                    >
+                        <input id="contato" name="contato" type="text" value="<?php echo $usuario['contato']; ?>" readonly>
                     </div>
 
                     <div class="input-box">
                         <label for="cpf">CPF</label>
-                        <input id="numerocpf" name="cpf" type="text" placeholder="Digite seu CPF" required>
+                        <input id="numerocpf" name="cpf" type="text" value="<?php echo $usuario['cpf']; ?>" readonly>
                     </div>
 
                     <div class="input-box">

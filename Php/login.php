@@ -9,6 +9,8 @@
 <body>
 
 <?php
+    session_start();
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         require_once('conexao.php');
@@ -21,16 +23,14 @@
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
-            $_SESSION['usuario'] = array('name' => $row['nome_cli'], 'cpf' => $row['cpf_cli']);
-            header("Location: ../index.html");
+            $_SESSION['usuario'] = array('name' => $row['nome_cli'], 'cpf' => $row['cpf_cli'], 'contato' => $row['contato_cli']);
+            header("Location: ../index.php");
             exit();
         } else {
             echo"Erro na inserção: " . $conn->error;
         }
     
         $conn->close();
-
-
     }
     else{
         echo "Erro Dados";

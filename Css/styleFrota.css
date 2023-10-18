@@ -99,3 +99,9 @@ button {
     color: #696969;
     border-radius: 9px;
 }
+
+a{
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+}
