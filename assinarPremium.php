@@ -1,4 +1,18 @@
 <!-- Feito por Welliton Giori Silva -->
+<?php
+session_start();
+//require_once('Php/dados_usuario.php');
+
+// Verificar se o usuário está logado
+if (!isset($_SESSION['usuario']) && !is_array($_SESSION['usuario'])) {
+    header("Location: formLogarUsuario.html"); // Redireciona para a página de login se não estiver logado
+    exit();
+}
+
+// Obter informações do usuário
+$usuario = $_SESSION['usuario'];
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -22,36 +36,31 @@
                     <div class="title">
                         <h1>Assinatura</h1>
                     </div>
-                    <div class="login-button">
-                        <button><a href="#">Entrar</a></button>
-                    </div>
                 </div>
 
                 <div class="input-group">
                     <div class="input-box">
                         <label for="nome">Nome Completo</label>
-                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome completo" required minlength="4" maxlength="50">
+                        <input id="nome" type="text" name="nome" value="<?php echo $usuario['name']; ?>" readonly>
                     </div>
 
                     <div class="input-box">
                         <label for="cpf">Cpf</label>
-                        <input id="cpf" type="text" name="cpf" required
-                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                        <input id="cpf" type="text" name="cpf" value="<?php echo $usuario['cpf']; ?>" readonly>
                     </div>
                     <div class="input-box">
                         <label for="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required min="3" maxlength="256">
+                        <input id="email" type="email" name="email" value="<?php echo $usuario['email']; ?>" readonly>
                     </div>
 
                     <div class="input-box">
                         <label for="celular">Celular</label>
-                        <input id="celular" type="tel" name="celular" required
-                            pattern="\(\d{2}\)\d{5}-\d{4}">
+                        <input id="celular" type="tel" name="celular" value="<?php echo $usuario['contato']; ?>" readonly>
                     </div>
 
                     <div class="input-box">
                         <label for="dataNascimento">Data de Nascimento</label>
-                        <input id="dataNascimento" name="dataNascimento" type="date" required>
+                        <input id="dataNascimento" name="dataNascimento" type="date" value="<?php echo $usuario['nascimento']; ?>" readonly>
                     </div>
 
                     <div class="input-box">

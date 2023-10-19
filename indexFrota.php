@@ -13,7 +13,7 @@
     <header>
         <nav class="topnav">
             <a href="#">Localização</a>
-            <a href="#">Contato</a>
+            <a href="assinarPremium.html">Assinatura</a>
             <a href="indexQuemSomos.html">Quem Somos?</a>
             <a href="#">Ofertas</a>
             <a href="#">Frota</a>
@@ -69,7 +69,7 @@
                         <h5> Trava Eletrica </h5>
                     </div>
                     <div classe="button">
-                        <button><a href="formCadastrarReserva.php">Reservar Agora</a></button>
+                        <button><a href="formCadastrarReserva.php" onclick="setSessionValues('Onix Plus 1.0', 'R$450,00')">Reservar Agora</a></button>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                         <h5> Automático</h5>
                     </div>
                     <div classe="button">
-                        <button>Reservar Agora</button>
+                        <button><a href="formCadastrarReserva.php" onclick="setSessionValues('Renault Captur 2.0', 'R$450,00')">Reservar Agora</a></button>
                     </div>
                 </div>
             </div>
@@ -161,7 +161,7 @@
                         <h5> Trava Eletrica </h5>
                     </div>
                     <div classe="button">
-                        <button>Reservar Agora</button>
+                        <button><a href="formCadastrarReserva.php" onclick="setSessionValues('Cruze Sedan', 'R$500,00')">Reservar Agora</a></button>
                     </div>
 
                 </div>
@@ -210,7 +210,7 @@
                             <h5> 3 malas(s) grande(s)</h5>
                         </div>
                         <div classe="button">
-                            <button>Reservar Agora</button>
+                            <button><a href="formCadastrarReserva.php" onclick="setSessionValues('Ford Fusion 2.5', 'R$750,00')">Reservar Agora</a></button>
                         </div>
                     </div>
                 </div>
@@ -257,7 +257,7 @@
                             <h5> 4 portas</h5>
                         </div>
                         <div classe="button">
-                            <button>Reservar Agora</button>
+                            <button><a href="formCadastrarReserva.php" onclick="setSessionValues('Corolla GLI', 'R$750,00')">Reservar Agora</a></button>
                         </div>
                     </div>
                 </div>
@@ -304,7 +304,7 @@
                         <h5> 999 KG</h5>
                     </div>
                     <div classe="button">
-                        <button>Reservar Agora</button>
+                        <button><a href="formCadastrarReserva.php" onclick="setSessionValues('S10 2.8 Turbo', 'R$750,00')">Reservar Agora</a></button>
                     </div>
                 </div>
             </div>
@@ -344,7 +344,7 @@
                             <h5> 5 pessoas</h5>
                         </div>
                         <div classe="button">
-                            <button>Reservar Agora</button>
+                            <button><a href="formCadastrarReserva.php" onclick="setSessionValues('Chevrolet Equinox 1.5', 'R$500,00')">Reservar Agora</a></button>
                         </div>
                     </div>
                 </div>
@@ -383,7 +383,7 @@
                             <h5> 5 pessoas</h5>
                         </div>
                         <div classe="button">
-                            <button>Reservar Agora</button>
+                            <button><a href="formCadastrarReserva.php" onclick="setSessionValues('Audi A4 2.0', 'R$1250,00')">Reservar Agora</a></button>
                         </div>
                     </div>
                 </div>
@@ -422,7 +422,7 @@
                         <h5> 5 pessoas</h5>
                     </div>
                     <div classe="button">
-                        <button>Reservar Agora</button>
+                        <button><a href="formCadastrarReserva.php" onclick="setSessionValues('C180 1.6 Turbo', 'R$1000,00')">Reservar Agora</a></button>
                     </div>
                 </div>
             </div>
@@ -436,5 +436,15 @@
         </footer>
     </main>
 </body>
+
+<script>
+    function setSessionValues(modelo, valor) {
+         // Envia os valores para o servidor por meio de uma requisição POST
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'Php/veiculo.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send('modelo=' + modelo + '&valor=' + valor);
+    }
+</script>
 
 </html>

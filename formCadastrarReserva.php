@@ -11,6 +11,7 @@ if (!isset($_SESSION['usuario']) && !is_array($_SESSION['usuario'])) {
 
 // Obter informações do usuário
 $usuario = $_SESSION['usuario'];
+$veiculo = $_SESSION['veiculo'];
 ?>
 
 <!DOCTYPE html>
@@ -62,13 +63,12 @@ $usuario = $_SESSION['usuario'];
 
                     <div class="input-box">
                         <label for="valor">Valor Reserva</label>
-                        <input id="valor" name="valor" type="text" placeholder="Digite o valor do reserva" required>
+                        <input id="valor" name="valor" type="text" value="<?php echo $veiculo['valor']; ?>" readonly>
                     </div>
 
                     <div class="input-box">
                         <label for="modeloCar">Modelo Carro</label>
-                        <input id="modeloCar" name="modeloCar" type="text" placeholder="Digite o modelo carro" required
-                            minlength="2" maxlength="60">
+                        <input id="modeloCar" name="modeloCar" type="text" value="<?php echo $veiculo['modelo']; ?>" readonly>
                     </div>
 
                     <div class="input-box">

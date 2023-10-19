@@ -49,10 +49,10 @@ $usuario = $_SESSION['usuario'];
             </div>
             <a href="indexCadastros.html">Forms</a>
             <a href="#">Localização</a>
-            <a href="#">Contato</a>
+            <a href="assinarPremium.php">Assinatura</a>
             <a href="indexQuemSomos.html">Quem Somos?</a>
             <a href="#">Ofertas</a>
-            <a href="indexFrota.html">Frota</a>
+            <a href="indexFrota.php">Frota</a>
             <a href="#">Home</a>
             <img src="Img/default-logo.png" alt="">
         </nav>
