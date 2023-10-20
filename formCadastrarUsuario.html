@@ -37,7 +37,7 @@
     
                         <div class="input-box">
                             <label for="data">Data de Nascimento</label>
-                            <input id="data" type="date" name="data" placeholder="(xx) xxxx-xxxx"  pattern="[0-9]{2}[0-9]{5}-[0-9]{4}"required>
+                            <input id="data" type="date" name="data"required>
                         </div>
     
                         <div class="input-box">
@@ -54,7 +54,7 @@
 
                         <div class="input-box">
                             <label for="celular">Celular</label>
-                            <input id="celular" type="text" name="celular" required>
+                            <input id="celular" type="text" name="celular" placeholder="Digite seu celular" required>
                         </div>
 
                         <div class="input-box">
@@ -93,7 +93,7 @@
                     <script src="Js/telefone.js"></script>
                     <script>
                         new FormMask(document.querySelector("#cpf"), "___.___.___-__", "_", [".", "-"])
-                        new FormMask(document.querySelector("#Celular"), "(__)_____-____", "_", ["(", ")", "-"])
+                        new FormMask(document.querySelector("#celular"), "(__)_____-____", "_", ["(", ")", "-"])
                     </script>
     
                     <div class="continue-button">

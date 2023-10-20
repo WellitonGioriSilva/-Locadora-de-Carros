@@ -26,7 +26,9 @@
         $sql = "INSERT INTO cliente VALUES (null, '$nome', '$cpf', '$rg', '$email', '$celular', '$nacionalidade', '$senha', '$genero', '$dataNascimento');";
 
         if ($conn->query($sql) === TRUE) {
-            echo"Dados inseridos com sucesso!";
+            echo "<script>alert(message);</script>";
+            header("Location: ../index.php");
+            exit();
         } else {
             echo"Erro na inserção: " . $conn->error;
         }
@@ -41,6 +43,6 @@
     ?>
 </body>
 </html>
-    
+
 </body>
 </html>

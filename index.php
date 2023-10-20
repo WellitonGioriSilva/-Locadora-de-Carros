@@ -51,7 +51,7 @@ $usuario = $_SESSION['usuario'];
             <a href="#">Localização</a>
             <a href="assinarPremium.php">Assinatura</a>
             <a href="indexQuemSomos.html">Quem Somos?</a>
-            <a href="#">Ofertas</a>
+            <a href="indexOferta.html">Ofertas</a>
             <a href="indexFrota.php">Frota</a>
             <a href="#">Home</a>
             <img src="Img/default-logo.png" alt="">

@@ -15,7 +15,7 @@
             <a href="#">Localização</a>
             <a href="assinarPremium.html">Assinatura</a>
             <a href="indexQuemSomos.html">Quem Somos?</a>
-            <a href="#">Ofertas</a>
+            <a href="indexOferta.html">Ofertas</a>
             <a href="#">Frota</a>
             <a href="index.php">Home</a>
         </nav>
