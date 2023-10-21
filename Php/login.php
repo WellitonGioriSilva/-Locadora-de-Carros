@@ -27,10 +27,11 @@
             header("Location: ../index.php");
             exit();
         } else {
-            echo"Erro na inserção: " . $conn->error;
+            header("Location: ../formLogarUsuario.php");
+            exit();
         }
     
-        $conn->close();
+        //$conn->close();
     }
     else{
         echo "Erro Dados";

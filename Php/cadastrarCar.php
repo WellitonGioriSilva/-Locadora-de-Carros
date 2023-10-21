@@ -29,12 +29,14 @@
         $sql = "INSERT INTO veiculo VALUES (null, '$nome', '$quant_portas', '$ar', '$trava', '$airbag', '$direcao', '$freio', '$cambio', '$porta_malas', '$quant_pessoas', '$tracao', '$placa', '$valor');";
 
         if ($conn->query($sql) === TRUE) {
-            echo"Dados inseridos com sucesso!";
+            header("Location: ../index.php");
+            exit();
         } else {
-            echo"Erro na inserção: " . $conn->error;
+            header("Location: ../formCadastrarCar.html");
+            exit();
         }
     
-        $conn->close();
+        //$conn->close();
     }
     else{
         echo "Erro Dados";

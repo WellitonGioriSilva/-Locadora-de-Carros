@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav class="topnav">
-            <a href="#">Localização</a>
+            <a href="indexLoc.php">Localização</a>
             <a href="assinarPremium.html">Assinatura</a>
             <a href="indexQuemSomos.html">Quem Somos?</a>
             <a href="indexOferta.html">Ofertas</a>

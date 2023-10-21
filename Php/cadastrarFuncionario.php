@@ -23,12 +23,14 @@
         $sql = "INSERT INTO funcionario VALUES (null, '$nome', '$cpf', '$email', '$celular', '$genero', '$data');";
 
         if ($conn->query($sql) === TRUE) {
-            echo"Dados inseridos com sucesso!";
+            header("Location: ../index.php");
+            exit();
         } else {
-            echo"Erro na inserção: " . $conn->error;
+            header("Location: ../formCadastrarFuncionario.html");
+            exit();
         }
     
-        $conn->close();
+        //$conn->close();
     }
     else{
         echo "Erro Dados";

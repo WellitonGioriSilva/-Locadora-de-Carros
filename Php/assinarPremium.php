@@ -24,12 +24,14 @@
         $sql = "INSERT INTO cliente_premium VALUES (null, '$nome', '$cpf', '$email', '$assinatura', '$tempo', '$pagamento', '$celular', '$data');";
 
         if ($conn->query($sql) === TRUE) {
-            echo"Dados inseridos com sucesso!";
+            header("Location: ../index.php");
+            exit();
         } else {
-            echo"Erro na inserção: " . $conn->error;
+            header("Location: ../assinarPremium.php");
+            exit();
         }
     
-        $conn->close();
+        //$conn->close();
     }
     else{
         echo "Erro Dados";

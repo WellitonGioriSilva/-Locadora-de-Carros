@@ -1,0 +1,73 @@
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        /*box-sizing: border-box;*/
+    }
+
+    .topnav a{
+        text-decoration: none;
+        float: right;
+        padding: 25px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        color: #ffbe00;
+        font-size: 20px;
+        transition: 1s;
+    }
+
+    .topnav a:hover{
+        text-shadow: 0px 1px 13px rgba(255, 190, 0, 1);
+    }
+
+    .topnav .user-icon{
+        padding: 20px 45px;
+        font-size: 30px;
+    }
+
+    .topnav img{
+        width: 200px;
+        padding: 15px 35px;
+    }
+
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2%;
+    }
+
+    main .container{
+        width: 35%;
+    }
+
+    main .title1{
+        text-align: center;
+        margin-top: 6%;
+    }
+
+    main h2{
+        color: #ffbe00;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 27px;
+    }
+
+    main #map{
+        margin-top: 50px;
+        height: 48rem;
+    }
+
+    #buttons-login div{
+        display: flex;
+        flex-direction: column;
+        float: right;
+    }
+    
+    #login1 div{
+        display: flex;
+        flex-direction: column;
+        float: right;
+    }

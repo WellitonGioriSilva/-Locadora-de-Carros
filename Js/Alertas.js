@@ -1,3 +1,7 @@
-function alerta() {
-    alert("Esta é a função JavaScript!");
+function sucesso(message) {
+    swal({
+        title: "Sucesso!",
+        text: message,
+        icon: "success",       
+    });
 }

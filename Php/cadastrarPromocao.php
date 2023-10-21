@@ -24,12 +24,14 @@
         $sql = "INSERT INTO promocao VALUES (null, '$nomeVeiculo', '$valorAtual', '$valorPromocional', '$data_inic_promocao', '$data_fin_promocao', '$tipoVeiculo', '$tipoPromocao');";
 
         if ($conn->query($sql) === TRUE) {
-            echo"Dados inseridos com sucesso!";
+            header("Location: ../index.php");
+            exit();
         } else {
-            echo"Erro na inserção: " . $conn->error;
+            header("Location: ../formCadastrarPromocao.html");
+            exit();
         }
     
-        $conn->close();
+        //$conn->close();
     }
     else{
         echo "Erro Dados";

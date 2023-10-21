@@ -21,7 +21,7 @@ $usuario = $_SESSION['usuario'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="Css/styleHome.css">
+    <link rel="stylesheet" href="Css/styleLoc.css">
     <script src="https://kit.fontawesome.com/c0362920ae.js" crossorigin="anonymous"></script>  
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -53,51 +53,16 @@ $usuario = $_SESSION['usuario'];
             <a href="#">Localização</a>
             <a href="assinarPremium.php">Assinatura</a>
             <a href="indexQuemSomos.html">Quem Somos?</a>
-            <a href="#">Ofertas</a>
+            <a href="indexOferta.html">Ofertas</a>
             <a href="indexFrota.php">Frota</a>
-            <a href="#">Home</a>
+            <a href="index.php">Home</a>
             <img src="Img/default-logo.png" alt="">
         </nav>
     </header>
     <main>
-        <div class="title1"><h2>Veículos em Destaque</h2></div>
-        <div id="map" style="height: 400px;"></div>
+        <div class="title1"><h2>Localização</h2></div>
+        <div id="map"></div>
     </main>
-    <footer>
-        <div class=""><h1 class="title1">AVALIAÇÕES</h1></div>
-
-        <div>
-            <div class="card1">
-                <div class="iconPessoa">
-                    <img src="Img/Pessoa.png" alt="">
-                </div>
-                <div class="textAval">
-                    <h1>Welliton Giori Silva</h1>
-                    <p>Na volta de uma viajem em familia, nosso voo começou a ser remarcado e quando nos demos conta, paramos em Curitiba. Sem a loja DEFAULT do aeroporto e o atendimento dos colaboradores, não sei como faríamos para voltar para casa.</p>    
-                </div>
-            </div>
-            
-            <div class="card1">
-                <div class="iconPessoa">
-                    <img src="Img/Pessoa.png" alt="">
-                </div>
-                <div class="textAval">
-                    <h1>Welliton Giori Silva</h1>
-                    <p>Na volta de uma viajem em familia, nosso voo começou a ser remarcado e quando nos demos conta, paramos em Curitiba. Sem a loja DEFAULT do aeroporto e o atendimento dos colaboradores, não sei como faríamos para voltar para casa.</p>    
-                </div>
-            </div>
-            
-            <div class="card1">
-                <div class="iconPessoa">
-                    <img src="Img/Pessoa.png" alt="">
-                </div>
-                <div class="textAval">
-                    <h1>Welliton Giori Silva</h1>
-                    <p>Na volta de uma viajem em familia, nosso voo começou a ser remarcado e quando nos demos conta, paramos em Curitiba. Sem a loja DEFAULT do aeroporto e o atendimento dos colaboradores, não sei como faríamos para voltar para casa.</p>    
-                </div>
-            </div>
-        </div>
-    </footer>
     <script>
       function abrirComboBox() {
         var combobox = document.getElementById('buttons-login');
@@ -125,14 +90,14 @@ $usuario = $_SESSION['usuario'];
             xhr.send();
         }
 
-        var map = L.map('map').setView([51.505, -0.09], 13); // Define as coordenadas iniciais e o nível de zoom
+        var map = L.map('map').setView([-10.8778, -61.9515], 13); // Define as coordenadas iniciais e o nível de zoom
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        L.marker([51.5, -0.09]).addTo(map) // Adiciona um marcador ao mapa
+        L.marker([-10.8778, -61.9515]).addTo(map) // Adiciona um marcador ao mapa
           .bindPopup('Localização aqui!').openPopup();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

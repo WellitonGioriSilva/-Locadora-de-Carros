@@ -9,8 +9,8 @@
 <body>
 
 <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
         require_once('conexao.php');
         
         $nome = $_POST["name"];
@@ -26,9 +26,11 @@
         $sql = "INSERT INTO cliente VALUES (null, '$nome', '$cpf', '$rg', '$email', '$celular', '$nacionalidade', '$senha', '$genero', '$dataNascimento');";
 
         if ($conn->query($sql) === TRUE) {
-            echo "<script>alert(message);</script>";
-            header("Location: ../index.php");
-            exit();
+            echo '<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>';
+            echo '<script src="../Js/Alertas.js"></script>'; // Inclua o arquivo JavaScript
+            echo '<script>';
+            echo 'sucesso("Usuário cadastrado.");'; // Chame a função JavaScript
+            echo '</script>';
         } else {
             echo"Erro na inserção: " . $conn->error;
         }
@@ -43,6 +45,5 @@
     ?>
 </body>
 </html>
-
 </body>
 </html>

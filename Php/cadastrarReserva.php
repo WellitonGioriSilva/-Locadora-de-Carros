@@ -25,12 +25,14 @@
         $sql = "INSERT INTO reserva VALUES (null, '$condutor', '$contato', '$cpf', '$cnh', '$valor_reserva', '$modelo_carro', '$cidade', '$data_inic_reserva', '$data_dev_reserva');";
 
         if ($conn->query($sql) === TRUE) {
-            echo"Dados inseridos com sucesso!";
+            header("Location: ../index.php");
+            exit();
         } else {
-            echo"Erro na inserção: " . $conn->error;
+            header("Location: ../formCadastrarReserva.php");
+            exit();
         }
     
-        $conn->close();
+        //$conn->close();
     }
     else{
         echo "Erro Dados";
