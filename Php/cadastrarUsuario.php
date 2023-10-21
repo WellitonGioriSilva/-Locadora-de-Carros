@@ -26,16 +26,14 @@
         $sql = "INSERT INTO cliente VALUES (null, '$nome', '$cpf', '$rg', '$email', '$celular', '$nacionalidade', '$senha', '$genero', '$dataNascimento');";
 
         if ($conn->query($sql) === TRUE) {
-            echo '<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>';
-            echo '<script src="../Js/Alertas.js"></script>'; // Inclua o arquivo JavaScript
-            echo '<script>';
-            echo 'sucesso("Usuário cadastrado.");'; // Chame a função JavaScript
-            echo '</script>';
+            header("Location: ../index.php");
+            exit();
         } else {
-            echo"Erro na inserção: " . $conn->error;
+            header("Location: ../formCadastrarUsuario.html");
+            exit();
         }
     
-        $conn->close();
+        //$conn->close();
 
 
     }

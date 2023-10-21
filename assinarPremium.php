@@ -97,6 +97,7 @@ $usuario = $_SESSION['usuario'];
 
                 <div class="continue-button">
                     <button onclick="validarCPF()" type="submit">Continuar</button>
+                    <button class="btVoltar"><a href="index.php">Voltar</a></button>
                 </div>
             </form>
         </div>

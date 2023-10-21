@@ -98,6 +98,7 @@ $veiculo = $_SESSION['veiculo'];
 
                 <div class="continue-button">
                     <button onclick="validarCPF()" type="submit">Cadastrar</button>
+                    <button class="btVoltar"><a href="index.php">Voltar</a></button>
                 </div>
             </form>
         </div>
